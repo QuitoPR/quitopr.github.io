@@ -10,12 +10,69 @@
     <h1>Randomizer Tool</h1>
 
     <form id="randomizer-form">
-        <label for="stage">Stage</label>
-        <input type="checkbox" id="stage" name="category" value="Stage">
+        <div class="category">
+            <label for="stage">Stage</label>
+            <input type="checkbox" id="stage" name="category" value="Stage">
+        </div>
 
-        <label for="location">Location</label>
-        <input type="checkbox" id="location" name="category" value="Location">
+        <div class="category">
+            <label for="location">Location</label>
+            <input type="checkbox" id="location" name="category" value="Location">
+            <div class="values" style="display: none;">
+                <label><input type="checkbox" name="values" value="Monte-Carlo"> Monte-Carlo</label>
+                <label><input type="checkbox" name="values" value="Sweden"> Sweden</label>
+                <label><input type="checkbox" name="values" value="Mexico"> Mexico</label>
+                <label><input type="checkbox" name="values" value="Croatia"> Croatia</label>
+                <label><input type="checkbox" name="values" value="Portugal"> Portugal</label>
+                <label><input type="checkbox" name="values" value="Sardegna"> Sardegna</label>
+                <label><input type="checkbox" name="values" value="Kenya"> Kenya</label>
+                <label><input type="checkbox" name="values" value="Estonia"> Estonia</label>
+                <label><input type="checkbox" name="values" value="Finland"> Finland</label>
+                <label><input type="checkbox" name="values" value="Greece"> Greece</label>
+                <label><input type="checkbox" name="values" value="Chile"> Chile</label>
+                <label><input type="checkbox" name="values" value="Japan"> Japan</label>
+                <label><input type="checkbox" name="values" value="Mediterraneo"> Mediterraneo</label>
+                <label><input type="checkbox" name="values" value="Pacifico"> Pacifico</label>
+                <label><input type="checkbox" name="values" value="Oceania"> Oceania</label>
+                <label><input type="checkbox" name="values" value="Scandia"> Scandia</label>
+                <label><input type="checkbox" name="values" value="Iberia"> Iberia</label>
+            </div>
+        </div>
 
+        <div class="category">
+            <label for="weather">Weather</label>
+            <input type="checkbox" id="weather" name="category" value="Weather">
+            <div class="values" style="display: none;">
+                <label><input type="checkbox" name="values" value="Dry"> Dry</label>
+                <label><input type="checkbox" name="values" value="Wet"> Wet</label>
+            </div>
+        </div>
+
+        <div class="category">
+            <label for="car">Car</label>
+            <input type="checkbox" id="car" name="category" value="Car">
+            <div class="values" style="display: none;">
+                <label><input type="checkbox" name="values" value="WRC"> WRC</label>
+                <label><input type="checkbox" name="values" value="WRC2"> WRC2</label>
+                <label><input type="checkbox" name="values" value="JWRC"> JWRC</label>
+                <label><input type="checkbox" name="values" value="WRC '17-21"> WRC '17-21</label>
+                <label><input type= "checkbox" name="values" value="WRC '97-11"> WRC '97-11</label>
+                <label><input type="checkbox" name="values" value="Rally2"> Rally2</label>
+                <label><input type="checkbox" name="values" value="Rally4"> Rally4</label>
+                <label><input type="checkbox" name="values" value="NR4/R4"> NR4/R4</label>
+                <label><input type="checkbox" name="values" value="S2000"> S2000</label>
+                <label><input type="checkbox" name="values" value="S1600"> S1600</label>
+                <label><input type="checkbox" name="values" value="F2 Kit"> F2 Kit</label>
+                <label><input type="checkbox" name="values" value="Group A"> Group A</label>
+                <label><input type="checkbox" name="values" value="Group B 4WD"> Group B 4WD</label>
+                <label><input type="checkbox" name="values" value="Group B RWD"> Group B RWD</label>
+                <label><input type="checkbox" name="values" value="H3 RWD"> H3 RWD</label>
+                <label><input type="checkbox" name="values" value="H2 RWD"> H2 RWD</label>
+                <label><input type="checkbox" name="values" value="H2 FWD"> H2 FWD</label>
+                <label><input type="checkbox" name="values" value="H1 FWD"> H1 FWD</label>
+            </div>
+        </div>
+    
         <button type="button" onclick="generateRandomList()">Generate Random List</button>
     </form>
 
