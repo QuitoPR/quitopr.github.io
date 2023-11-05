@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Value Generator</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Randomizer Tool</title>
 </head>
 <body>
-    <h1>Random Value Generator</h1>
-    <form id="generator-form">
-        <div class="checkbox-group">
-            <label for="stage-checkbox">Stage</label>
-            <input type="checkbox" id="stage-checkbox" class="category-checkbox">
-        </div>
-        <div class="checkbox-group">
-            <label for="location-checkbox">Location</label>
-            <input type="checkbox" id="location-checkbox" class="category-checkbox">
-        </div>
-        <button type="button" id="generate-button">Generate</button>
+    <h1>Randomizer Tool</h1>
+
+    <form id="randomizer-form">
+        <label for="stage">Stage</label>
+        <input type="checkbox" id="stage" name="category" value="Stage">
+
+        <label for="location">Location</label>
+        <input type="checkbox" id="location" name="category" value="Location">
+
+        <button type="button" onclick="generateRandomList()">Generate Random List</button>
     </form>
-    <div id="output"></div>
+
+    <div id="result"></div>
+
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,31 +1,25 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const stageValues = ["Stage 1", "Stage 2", "Stage 3"];
-    const locationValues = ["Rally Iberia", "Portugal", "Germany"];
-    
-    const generateButton = document.getElementById("generate-button");
-    const output = document.getElementById("output");
-    
-    generateButton.addEventListener("click", function() {
-        const selectedCategories = [];
-        
-        const stageCheckbox = document.getElementById("stage-checkbox");
-        const locationCheckbox = document.getElementById("location-checkbox");
-        
-        if (stageCheckbox.checked) {
-            selectedCategories.push(...stageValues);
-        }
-        
-        if (locationCheckbox.checked) {
-            selectedCategories.push(...locationValues);
-        }
-        
-        if (selectedCategories.length > 0) {
-            const randomIndex = Math.floor(Math.random() * selectedCategories.length);
-            const randomValue = selectedCategories[randomIndex];
-            
-            output.textContent = randomValue;
-        } else {
-            output.textContent = "Please select at least one category.";
+function generateRandomList() {
+    const categories = document.getElementsByName('category');
+    let selectedCategories = [];
+
+    categories.forEach((category) => {
+        if (category.checked) {
+            selectedCategories.push(category.value);
         }
     });
-});
+
+    const values = {
+        Stage: ["1", "2", "3"],
+        Location: ["Rally Iberia", "Portugal", "Germany"]
+    };
+
+    let resultList = [];
+
+    selectedCategories.forEach((category) => {
+        const randomValue = values[category][Math.floor(Math.random() * values[category].length)];
+        resultList.push(category + ' ' + randomValue);
+    });
+
+    const resultElement = document.getElementById('result');
+    resultElement.textContent = resultList.join(', ');
+}
